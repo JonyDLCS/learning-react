@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --main-color: rgb(39, 78, 204)
+}
+
+.app-name-logo{
+    font-family: 'Ubuntu';
+    font-size: larger;
+
+
+}
+
+.app-name-blue-text{
+    color:var(--main-color)
+
+}
+
+.main-color-bg{
+    background-color: var(--main-color);
+}
+
+.app-name-bar{
+    background-color: var(--main-color);
+    width: 90%;
+    height: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:0;
+}
+
 .loader{
     border:3px solid #f3f3f3;
     border-radius: 50%;

@@ -14,12 +14,14 @@ function Navigation() {
         from: { opacity: 0 },
         enter: { opacity: 0.3 },
         leave: { opacity: 0 },
+        config: { duration: 250 },
     })
 
     const menuTransitions = useTransition(showMenu, {
-    from: { opacity: 0 , transform:'translateX(-100%)'},
-    enter: { opacity: 1 , transform:'translateX(0%)'},
-    leave: { opacity: 0 , transform:'translateX(-100%)' },
+        from: { opacity: 0 , transform:'translateX(100%)'},
+        enter: { opacity: 1 , transform:'translateX(0%)'},
+        leave: { opacity: 0 , transform:'translateX(100%)' },
+        config: { duration: 300 },
     })
 
 
@@ -48,7 +50,7 @@ function Navigation() {
               menuTransitions((style, item) => (
                 item && 
                 <animated.div 
-                className='fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3'
+                className='fixed bg-white top-0 right-0 text-right w-72 h-full z-50 shadow p-3'
                 style={style}>
                   <NavigationMenu closeMenu={()=>setShowMenu(false)}/>
                 </animated.div>

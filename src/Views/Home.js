@@ -22,7 +22,7 @@ function Home() {
 
     if (products.data) {
         content = 
-            products.data.map((product)=>
+            products.data.slice(0,10).map((product)=>
             <div key={product.id} className='flex justify-center'>
                 <ProductCard product={product}/>
             </div>)
@@ -30,7 +30,7 @@ function Home() {
     } 
 
   return (
-    <div className='p-3'>
+    <div className='p-3 pb-10'>
         <h1 className=' font-bold text-xl' >Best Sellers</h1>
         {content}
     </div>

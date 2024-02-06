@@ -26,7 +26,7 @@ function Product() {
                 </h1>
                 <div>
                     <img 
-                        className=' max-h-[50vh]'
+                        className=' max-h-[50vh] rounded-sm'
                         src={product.data.images[0].imageURL}
                         alt={product.data.name}/>
                 </div>
